@@ -33,7 +33,7 @@ public class PullEventsFromSQS implements RequestHandler<Object, Object>
 	    
 	    HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<MultiValueMap<String, String>>(map, headers);
 	    RestTemplate restTemplate = new RestTemplate();
-		   restTemplate.postForEntity("http://3.218.67.161:8092/kontrakt/webhook",
+		   restTemplate.postForEntity("http://18.207.238.114:8092/kontrakt/webhook",
 		    		request , String.class );
 		      System.out.println("the event is forwrdd to kontrakt");
 		      return 200;
